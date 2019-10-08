@@ -1,0 +1,13 @@
+yourapp:
+  image: your/image
+  ports:
+    - "80:80"
+  links:
+    - elk
+
+elk:
+  image: sebp/elk
+  ports:
+    - "5601:5601"
+    - "9200:9200"
+    - "5044:5044"

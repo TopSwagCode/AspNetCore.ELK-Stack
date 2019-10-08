@@ -59,12 +59,13 @@ namespace TopSwagCode.ElkStack
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-            
+            //http://localhost:9200/
+            //https://search-topswagcode-logs-t4plkee6hks5z5wyjzse33aod4.eu-west-1.es.amazonaws.com/
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .Enrich.WithExceptionDetails()
                 .Enrich.WithMachineName()
-                .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("https://search-topswagcode-logs-t4plkee6hks5z5wyjzse33aod4.eu-west-1.es.amazonaws.com/"))
+                .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200/"))
                 {
                     AutoRegisterTemplate = true,
                 })
