@@ -1,4 +1,4 @@
-# TopSwagCode.ElkStack
+# AspNetCore.ElkStack
 
 Work in progress - Project showing how to create scalable logging for AspNetCore projects.
 
